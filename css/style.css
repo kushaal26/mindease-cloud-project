@@ -63,6 +63,17 @@ li {
   background-color: #990000;
 }
 
+.home-btn{
+  margin-top: -30px;
+  margin-right: 10px;
+}
+
+li.home-btn img {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 25%);
