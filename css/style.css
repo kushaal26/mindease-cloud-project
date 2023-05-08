@@ -103,3 +103,64 @@ li.home-btn img {
   font-size: 1.2rem;
 }
 
+.mood-heading {
+	font-size: 32px;
+	font-weight: 500;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+.mood-form {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mood-text {
+	margin-bottom: 20px;
+}
+
+input[type="text"],
+textarea {
+	padding: 10px;
+	font-size: 16px;
+	border: none;
+	border-bottom: 2px solid #ccc;
+	width: 100%;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+	outline: none;
+	border-color: #7f5a83;
+}
+
+label {
+	font-size: 18px;
+	font-weight: 400;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.submit-btn {
+	background-color: #7f5a83;
+	color: #fff;
+	padding: 10px;
+	font-size: 18px;
+	font-weight: 500;
+	border: none;
+	border-radius: 5px;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+.submit-btn:hover {
+	background-color: #944e75;
+}
