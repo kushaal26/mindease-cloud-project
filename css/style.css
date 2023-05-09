@@ -165,6 +165,10 @@ label {
 	background-color: #944e75;
 }
 
+.main-heading {
+  margin-top: -25px;
+}
+
 .therapistRow1 {
   position: absolute;
   top: 150px;
@@ -271,7 +275,6 @@ label {
   width: 200px;
   height: 200px;
   background-color: grey;
-<<<<<<< HEAD
 }
 
 .formHeading {
@@ -324,6 +327,3 @@ label {
 .submit-btnTherapy:hover {
 	background-color: #944e75;
 }
-=======
-}
->>>>>>> 8d1720b72e618ae8a71c4339f9bbcffdd6c27c20
