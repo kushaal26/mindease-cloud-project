@@ -164,3 +164,111 @@ label {
 .submit-btn:hover {
 	background-color: #944e75;
 }
+
+.therapistRow1 {
+  position: absolute;
+  top: 150px;
+  left: 150px;
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+}
+
+.therapistRow2 {
+  position: absolute;
+  top: 150px;
+  left: 450px;
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+}
+
+.therapistRow3 {
+  position: absolute;
+  top: 150px;
+  left: 750px;
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+}
+
+.therapistRow4 {
+  position: absolute;
+  top: 150px;
+  left: 1050px;
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+}
+
+.therapistRow5 {
+  position: absolute;
+  top: 450px;
+  left: 150px;
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+}
+
+.therapistRow6 {
+  position: absolute;
+  top: 450px;
+  left: 450px;
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+}
+
+.therapistRow7 {
+  position: absolute;
+  top: 450px;
+  left: 750px;
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+}
+
+.therapistRow8 {
+  position: absolute;
+  top: 450px;
+  left: 1050px;
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+}
+
+.therapistRow9 {
+  position: absolute;
+  top: 750px;
+  left: 150px;
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+}
+
+.therapistRow10 {
+  position: absolute;
+  top: 750px;
+  left: 450px;
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+}
+
+.therapistRow11 {
+  position: absolute;
+  top: 750px;
+  left: 750px;
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+}
+
+.therapistRow12 {
+  position: absolute;
+  top: 750px;
+  left: 1050px;
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+}
