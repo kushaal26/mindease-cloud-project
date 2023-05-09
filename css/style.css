@@ -271,4 +271,59 @@ label {
   width: 200px;
   height: 200px;
   background-color: grey;
+<<<<<<< HEAD
 }
+
+.formHeading {
+  text-align: center;
+}
+
+.formTherapy {
+  position: absolute;
+  left: 1350px;
+  right: 100px;
+  top: 150px;
+  margin-top: -50px;
+  background-color: lightgray;
+}
+
+.name-heading,
+.email-heading,
+.gender-heading,
+.dob-heading,
+.PhoneNumber-heading,
+.appointment-heading {
+  margin-top: 15px;
+  margin-left: 30px;
+}
+
+.name-form,
+.email-form,
+.gender-form,
+.dob-form,
+.PhoneNumber-form,
+.appointment-form {
+  margin-bottom: 15px;
+  margin-left: 30px;
+  width: 200px;
+}
+
+.submit-btnTherapy {
+  margin-left: 120px;
+  width: 200px;
+  background-color: #7f5a83;
+	color: #fff;
+	padding: 10px;
+	font-size: 18px;
+	font-weight: 500;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.submit-btnTherapy:hover {
+	background-color: #944e75;
+}
+=======
+}
+>>>>>>> 8d1720b72e618ae8a71c4339f9bbcffdd6c27c20
