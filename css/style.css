@@ -281,7 +281,7 @@ label {
   text-align: center;
 }
 
-form {
+.formTherapy {
   position: absolute;
   left: 1350px;
   right: 100px;
@@ -311,7 +311,19 @@ form {
   width: 200px;
 }
 
-.submit-btn {
+.submit-btnTherapy {
   margin-left: 120px;
   width: 200px;
+  background-color: #7f5a83;
+	color: #fff;
+	padding: 10px;
+	font-size: 18px;
+	font-weight: 500;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.submit-btnTherapy:hover {
+	background-color: #944e75;
 }
