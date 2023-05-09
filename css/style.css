@@ -165,10 +165,6 @@ label {
 	background-color: #944e75;
 }
 
-.main-heading {
-  margin-top: -25px;
-}
-
 .therapistRow1 {
   position: absolute;
   top: 150px;
@@ -275,43 +271,4 @@ label {
   width: 200px;
   height: 200px;
   background-color: grey;
-}
-
-.formHeading {
-  text-align: center;
-}
-
-form {
-  position: absolute;
-  left: 1350px;
-  right: 100px;
-  top: 150px;
-  margin-top: -50px;
-  background-color: lightgray;
-}
-
-.name-heading,
-.email-heading,
-.gender-heading,
-.dob-heading,
-.PhoneNumber-heading,
-.appointment-heading {
-  margin-top: 15px;
-  margin-left: 30px;
-}
-
-.name-form,
-.email-form,
-.gender-form,
-.dob-form,
-.PhoneNumber-form,
-.appointment-form {
-  margin-bottom: 15px;
-  margin-left: 30px;
-  width: 200px;
-}
-
-.submit-btn {
-  margin-left: 120px;
-  width: 200px;
 }
