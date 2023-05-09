@@ -2,6 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
+        <script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/hmac.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/enc-base64.js"></script>
+    <script type="text/javascript" src="lib/url-template/url-template.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/sigV4Client.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
+    <script type="text/javascript" src="apigClient.js"></script>
+    <script type="text/javascript" src="awsjsscript.js"></script>
     <title>Mood Tracker</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -23,7 +35,7 @@
         <div class="mood-text">
           <input type="text" id="mood-text-box" name="mood-text-box" placeholder="Enter here:" required>
         </div>
-        <button type="submit" class="submit-btn">Submit</button>
+        <button type="submit" class="submit-btn" onclick="submitResponse()">Submit</button>
       </form>
     </div>
   </body>
