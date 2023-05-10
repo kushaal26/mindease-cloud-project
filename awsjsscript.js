@@ -9,6 +9,11 @@ function submitResponse() {
     var user_response_text = document.getElementById("mood-text-box").value;
     console.log(user_response_text);
 
+    var timeInput = document.getElementById("time-input-box");
+    var timeValue = timeInput.value;
+    var hours = timeValue.split(":")[0];
+    var minutes = timeValue.split(":")[1];
+
     var params = {
         
     };
@@ -16,7 +21,9 @@ function submitResponse() {
     // console.log(params);
 
     var body = {
-        "inputs": user_response_text
+        "inputs": user_response_text,
+        "hours": hours,
+        "minutes": minutes
     };
 
     var additionalParams = {
