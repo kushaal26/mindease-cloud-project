@@ -195,110 +195,110 @@ label {
 
 .therapistRow1 {
   position: absolute;
-  top: 150px;
-  left: 150px;
+  top: 110px;
+  left: 50px;
   width: 200px;
   height: 200px;
-  background-color: grey;
+  /* background-color: grey; */
 }
 
 .therapistRow2 {
   position: absolute;
-  top: 150px;
-  left: 450px;
+  top: 110px;
+  left: 320px;
   width: 200px;
   height: 200px;
-  background-color: grey;
+  /* background-color: grey; */
 }
 
 .therapistRow3 {
   position: absolute;
-  top: 150px;
-  left: 750px;
+  top: 110px;
+  left: 590px;
   width: 200px;
   height: 200px;
-  background-color: grey;
+  /* background-color: grey; */
 }
 
 .therapistRow4 {
   position: absolute;
-  top: 150px;
-  left: 1050px;
+  top: 110px;
+  left: 860px;
   width: 200px;
   height: 200px;
-  background-color: grey;
+  /* background-color: grey; */
 }
 
 .therapistRow5 {
   position: absolute;
-  top: 450px;
-  left: 150px;
+  top: 490px;
+  left: 50px;
   width: 200px;
   height: 200px;
-  background-color: grey;
+  /* background-color: grey; */
 }
 
 .therapistRow6 {
   position: absolute;
-  top: 450px;
-  left: 450px;
+  top: 490px;
+  left: 320px;
   width: 200px;
   height: 200px;
-  background-color: grey;
+  /* background-color: grey; */
 }
 
 .therapistRow7 {
   position: absolute;
-  top: 450px;
-  left: 750px;
+  top: 490px;
+  left: 590px;
   width: 200px;
   height: 200px;
-  background-color: grey;
+  /* background-color: grey; */
 }
 
 .therapistRow8 {
   position: absolute;
-  top: 450px;
-  left: 1050px;
+  top: 490px;
+  left: 860px;
   width: 200px;
   height: 200px;
-  background-color: grey;
+  /* background-color: grey; */
 }
 
 .therapistRow9 {
   position: absolute;
-  top: 750px;
-  left: 150px;
+  top: 870px;
+  left: 50px;
   width: 200px;
   height: 200px;
-  background-color: grey;
+  /* background-color: grey; */
 }
 
 .therapistRow10 {
   position: absolute;
-  top: 750px;
-  left: 450px;
+  top: 870px;
+  left: 320px;
   width: 200px;
   height: 200px;
-  background-color: grey;
+  /* background-color: grey; */
 }
 
 .therapistRow11 {
   position: absolute;
-  top: 750px;
-  left: 750px;
+  top: 870px;
+  left: 590px;
   width: 200px;
   height: 200px;
-  background-color: grey;
+  /* background-color: grey; */
 }
 
 .therapistRow12 {
   position: absolute;
-  top: 750px;
-  left: 1050px;
+  top: 870px;
+  left: 860px;
   width: 200px;
   height: 200px;
-  background-color: grey;
+  /* background-color: grey; */
 }
 
 .formHeading {
@@ -307,10 +307,11 @@ label {
 
 .formTherapy {
   position: absolute;
-  left: 1350px;
-  right: 100px;
+  left: 1100px;
+  right: 10px;
   top: 150px;
-  margin-top: -50px;
+  bottom: -100px;
+  margin-top: -50px; 
   background-color: lightgray;
 }
 
