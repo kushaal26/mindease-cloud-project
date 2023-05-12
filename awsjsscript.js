@@ -162,6 +162,8 @@ function submitTherapistResponse() {
     var genderResponseText = document.getElementById("gender-text-box").value;
     var dobResponseText = document.getElementById("dob-text-box").value;
     var appointmentResponseText = document.getElementById("appointment-text-box").value;
+    var therapistName = document.getElementById("therapist-select").value;
+    var genTherapist = genderResponseText + "&" + therapistName
 
     var params = {
         
@@ -173,7 +175,7 @@ function submitTherapistResponse() {
         "name": nameResponseText,
         "email": emailResponseText,
         "phoneNumber": phoneNumberResponseText,
-        "gender": genderResponseText,
+        "gender": genTherapist,
         "dob": dobResponseText,
         "appointment": appointmentResponseText
     };
