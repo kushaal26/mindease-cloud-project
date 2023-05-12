@@ -352,6 +352,16 @@ label {
 	background-color: #944e75;
 }
 
+.therapist-list p{
+  font-size: 16;
+  font-family: Calibri;
+  padding-top: -45px;
+}
+
+.therapist-list h2{
+  font-family: Calibri;
+  padding-top: 5px;
+
 .graph-container {
   display: flex;
   flex-wrap: wrap;
