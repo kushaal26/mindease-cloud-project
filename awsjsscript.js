@@ -41,6 +41,14 @@ function submitResponse() {
 
         var data = {"moods" : moods, "sleep" : sleep};
 
+        var responseText = document.getElementById("response-text");
+
+        if(moods["label"] == "LABEL_1"){
+            responseText.innerHTML = "Congratulations! You are doing good today, keep it up.";
+        }else{
+            responseText.innerHTML = "It's okay! Let's us cheer you up!";
+        }
+        
         insertData(data);
         // insertDataSleep(sleep)
 
@@ -48,6 +56,8 @@ function submitResponse() {
         console.log(error);
     });
 
+    document.getElementById("mood-text-box").value = "";
+    document.getElementById("time-input-box").value = "";
 }
 
 function insertData(data){
