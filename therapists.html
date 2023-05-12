@@ -2,10 +2,22 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/hmac.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/enc-base64.js"></script>
+    <script type="text/javascript" src="lib/url-template/url-template.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/sigV4Client.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
+    <script type="text/javascript" src="apigClient.js"></script>
+    <script type="text/javascript" src="awsjsscript.js"></script>
     <title>Therapists Page</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body onload="therapistOnLoad()">
     <header>
       <div class="logo">
         <img src="css/logo.png" alt="Logo">
@@ -95,29 +107,29 @@
           <h1 class = "formHeading">Please fill out this form</h2>
             <h2 class="name-heading">Name</h2>
             <div class="name-form">
-              <input type="text" id="name-text-box" name="name-text-box" placeholder="Enter here:" required>
+              <input type="name" id="name-text-box" name="name-text-box" placeholder="Enter here:" required>
             </div>
             <h2 class="email-heading">Email-Id</h2>
             <div class="email-form">
-              <input type="text" id="email-text-box" name="email-text-box" placeholder="Enter here:" required>
+              <input type="email" id="email-text-box" name="email-text-box" placeholder="Enter here:" required>
             </div>
             <h2 class="gender-heading">Gender</h2>
             <div class="gender-form">
-              <input type="text" id="gender-text-box" name="gender-text-box" placeholder="Enter here:" required>
+              <input type="gender" id="gender-text-box" name="gender-text-box" placeholder="Enter here:" required>
             </div>
             <h2 class="dob-heading">Date Of Birth</h2>
             <div class="dob-form">
-              <input type="text" id="dob-text-box" name="dob-text-box" placeholder="Enter here:" required>
+              <input type="date" id="dob-text-box" name="dob-text-box" placeholder="Enter here:" required>
             </div>
             <h2 class="PhoneNumber-heading">Phone Number</h2>
             <div class="PhoneNumber-form">
-              <input type="text" id="PhoneNumber-text-box" name="PhoneNumber-text-box" placeholder="Enter here:" required>
+              <input type="phoneNumber" id="PhoneNumber-text-box" name="PhoneNumber-text-box" placeholder="Enter here:" required>
             </div>
             <h2 class="appointment-heading">Appointment Time</h2>
             <div class="appointment-form">
-              <input type="text" id="appointment-text-box" name="appointment-text-box" placeholder="Enter here:" required>
+              <input type="datetime-local" id="appointment-text-box" name="appointment-text-box" placeholder="Enter here:" required>
             </div>
-            <button type="submit" class="submit-btnTherapy">Submit</button>
+            <button type="submit" class="submit-btnTherapy" onclick="submitTherapistResponse()">Submit</button>
         </form>
       </main>      
     
