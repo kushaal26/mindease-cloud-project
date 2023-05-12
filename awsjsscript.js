@@ -157,56 +157,6 @@ function therapistOnLoad(){
     });
 }
 
-
-function submitTherapistResponse() {
-    event.preventDefault();
-
-    var apigClient = apigClientFactory.newClient({
-        apiKey: "GgVonluf8j5A9hkUT2tbY2n7q3i8Rj7E2GGEMfhS",
-    });
-    // console.log("HO")
-    debugger
-    var nameResponseText = document.getElementById("name-text-box").value;
-    var emailResponseText = document.getElementById("email-text-box").value;
-    var phoneNumberResponseText = document.getElementById("PhoneNumber-text-box").value;
-    var genderResponseText = document.getElementById("gender-text-box").value;
-    var dobResponseText = document.getElementById("dob-text-box").value;
-    var appointmentResponseText = document.getElementById("appointment-text-box").value;
-    var therapistName = document.getElementById("therapist-select").value;
-    var genTherapist = genderResponseText + "&" + therapistName
-
-    var params = {
-        
-    };
-
-    // console.log(params);
-
-    var body = {
-        "name": nameResponseText,
-        "email": emailResponseText,
-        "phoneNumber": phoneNumberResponseText,
-        "gender": genTherapist,
-        "dob": dobResponseText,
-        "appointment": appointmentResponseText
-    };
-
-    console.log(body);
-
-    var additionalParams = {
-        headers: {
-            "Content-Type": "application/json",
-        },
-    };
-
-    apigClient.therapistformPost(params, body, additionalParams).then(function (result) {
-        console.log(result);
-
-    }).catch(function (error) {
-        console.log(error);
-    });
-
-}
-
 function therapistOnLoad(){
     event.preventDefault();
 
@@ -317,5 +267,13 @@ function submitTherapistResponse() {
     }).catch(function (error) {
         console.log(error);
     });
+
+    document.getElementById("name-text-box").value = "";
+    document.getElementById("email-text-box").value = "";
+    document.getElementById("PhoneNumber-text-box").value = "";
+    document.getElementById("gender-text-box").value = "";
+    document.getElementById("dob-text-box").value = "";
+    document.getElementById("appointment-text-box").value = "";
+    document.getElementById("therapist-select").value = "";
 
 }
