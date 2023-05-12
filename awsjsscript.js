@@ -33,12 +33,52 @@ function submitResponse() {
     };
 
     apigClient.classifyPost(params, body, additionalParams).then(function (result) {
-        var label = result.data.classification;
-        console.log(label);
+
+        var moods = result.data.dynamo_data_moods;
+        var sleep = result.data.dynamo_data_sleep;
+
+        console.log("moods: "+JSON.stringify(moods));
+        console.log("sleep: "+JSON.stringify(sleep));
+
+        var data = {"moods" : moods, "sleep" : sleep};
+
+        insertData(data);
+        // insertDataSleep(sleep)
 
     }).catch(function (error) {
         console.log(error);
     });
+
+}
+
+function insertData(data){
+
+    console.log(data);
+
+    var apigClient = apigClientFactory.newClient({
+        apiKey: "GgVonluf8j5A9hkUT2tbY2n7q3i8Rj7E2GGEMfhS",
+    });
+    var params = {
+        
+    };
+
+    var body = data;
+
+    var additionalParams = {
+        headers: {
+            "Content-Type": "application/json",
+        },
+    };
+
+    apigClient.insertrdsPost(params, body, additionalParams).then(function (result) {
+
+        console.log(result);
+
+    }).catch(function (error) {
+        console.log(error);
+    });
+
+
 
 }
 
