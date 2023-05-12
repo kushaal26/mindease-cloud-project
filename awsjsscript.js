@@ -99,3 +99,53 @@ function therapistOnLoad(){
         console.log(error);
     });
 }
+
+function submitTherapistResponse() {
+    // event.preventDefault();
+
+    // var apigClient = apigClientFactory.newClient({
+    //     apiKey: "GgVonluf8j5A9hkUT2tbY2n7q3i8Rj7E2GGEMfhS",
+    // });
+    // console.log("HO")
+    debugger
+    var nameResponseText = document.getElementById("name-text-box").value;
+    var emailResponseText = document.getElementById("email-text-box").value;
+    var phoneNumberResponseText = document.getElementById("PhoneNumber-text-box").value;
+    var genderResponseText = document.getElementById("gender-text-box").value;
+    var dobResponseText = document.getElementById("dob-text-box").value;
+    var appointmentResponseText = document.getElementById("appointment-text-box").value;
+    
+    console.log(nameResponseText)
+
+    var params = {
+        
+    };
+
+    // console.log(params);
+
+    var body = {
+        "name": nameResponseText,
+        "email": emailResponseText,
+        "phoneNumber": phoneNumberResponseText,
+        "gender": genderResponseText,
+        "dob": dobResponseText,
+        "appointment": appointmentResponseText
+    };
+
+    console.log(body);
+
+    // var additionalParams = {
+    //     headers: {
+    //         "Content-Type": "application/json",
+    //     },
+    // };
+
+    // apigClient.classifyPost(params, body, additionalParams).then(function (result) {
+    //     var label = result.data.classification;
+    //     console.log(label);
+
+    // }).catch(function (error) {
+    //     console.log(error);
+    // });
+
+}
