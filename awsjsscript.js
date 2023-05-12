@@ -101,11 +101,11 @@ function therapistOnLoad(){
 }
 
 function submitTherapistResponse() {
-    // event.preventDefault();
+    event.preventDefault();
 
-    // var apigClient = apigClientFactory.newClient({
-    //     apiKey: "GgVonluf8j5A9hkUT2tbY2n7q3i8Rj7E2GGEMfhS",
-    // });
+    var apigClient = apigClientFactory.newClient({
+        apiKey: "GgVonluf8j5A9hkUT2tbY2n7q3i8Rj7E2GGEMfhS",
+    });
     // console.log("HO")
     debugger
     var nameResponseText = document.getElementById("name-text-box").value;
@@ -114,8 +114,6 @@ function submitTherapistResponse() {
     var genderResponseText = document.getElementById("gender-text-box").value;
     var dobResponseText = document.getElementById("dob-text-box").value;
     var appointmentResponseText = document.getElementById("appointment-text-box").value;
-    
-    console.log(nameResponseText)
 
     var params = {
         
@@ -134,18 +132,17 @@ function submitTherapistResponse() {
 
     console.log(body);
 
-    // var additionalParams = {
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //     },
-    // };
+    var additionalParams = {
+        headers: {
+            "Content-Type": "application/json",
+        },
+    };
 
-    // apigClient.classifyPost(params, body, additionalParams).then(function (result) {
-    //     var label = result.data.classification;
-    //     console.log(label);
+    apigClient.therapistformPost(params, body, additionalParams).then(function (result) {
+        console.log(result);
 
-    // }).catch(function (error) {
-    //     console.log(error);
-    // });
+    }).catch(function (error) {
+        console.log(error);
+    });
 
 }
