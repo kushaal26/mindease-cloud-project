@@ -351,3 +351,15 @@ label {
 .submit-btnTherapy:hover {
 	background-color: #944e75;
 }
+
+.graph-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.graph {
+  flex-basis: calc(50% - 10px);
+  height: 400px;
+  margin-bottom: 20px;
+}
