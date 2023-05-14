@@ -1,20 +1,5 @@
 <!DOCTYPE html>
 
-<!--
-Copyright 2014-2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-
-Licensed under the Apache License, Version 2.0 (the "License").
-
-You may not use this file except in compliance with the License. A copy
-of the License is located at
-
-https://aws.amazon.com/apache2.0/
-
-or in the "license" file accompanying this file. This file is distributed
-on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
-either express or implied. See the License for the specific language governing
-permissions and limitations under the License.
--->
 
 <html lang="en">
 
@@ -631,26 +616,6 @@ permissions and limitations under the License.
             return false;
         });
 
-        // Document URL typically looks like this for path-style URLs:
-        // - https://s3.amazonaws.com/mybucket1/index.html
-        // - https://s3-us-west-2.amazonaws.com/mybucket2/index.html
-        //
-        // Document URL typically looks like this for virtual-hosted-style URLs:
-        // - https://mybucket1.s3.amazonaws.com/index.html
-        // - https://mybucket2.s3-us-west-2.amazonaws.com/index.html
-        //
-        // Document URL typically looks like this for S3 website hosting:
-        // - http://mybucket3.s3-website-us-east-1.amazonaws.com/
-        // - http://mybucket4.s3-website.eu-central-1.amazonaws.com/
-
-        // TODO: need to support S3 website hosting option
-        //
-        // If we're launched from a bucket then let's try to determine the bucket
-        // name so we can query it immediately, without requiring the user to
-        // supply the bucket name.
-        //
-        // If the region was anything other than US Standard then we will also need
-        // to infer the region so that we can initialize the S3 SDK properly.
         console.log("Document URL: " + document.URL);
         var urls = document.URL.split('/');
         console.log("URL split: " + urls);
@@ -676,18 +641,6 @@ permissions and limitations under the License.
         if (s3exp_config.Bucket) {
             (s3exp_lister = s3list(s3exp_config, s3draw)).go();
         } else if (parser.hostname.endsWith('amazonaws.com')) {
-            // Hostname is likely to be in one of the following forms:
-            // - s3.amazonaws.com
-            // - bucket1.s3.amazonaws.com
-            // - s3-us-west-2.amazonaws.com
-            // - bucket2.s3-us-west-2.amazonaws.com
-
-            // If using static website hosting, the hostname will be of the form:
-            // - bucket.s3-website.eu-central-1.amazonaws.com/
-
-            // The following is also a legal form, but we do not support it, so
-            // you should use s3-eu-central-1 rather than s3.eu-central-1:
-            // - bucket3.s3.eu-central-1.amazonaws.com
 
             var bucket;
             var region;
@@ -713,8 +666,7 @@ permissions and limitations under the License.
                 console.log("host region=" + region);
             }
 
-            // If we found statically-hosted website prefix or explicit region, for
-            // example s3-us-west-2, then get region else use the default of US Standard
+
             if (region !== 's3') {
                 if (region.startsWith('s3-website-')) {
                     AWS.config.region = region.substring(11);
